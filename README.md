@@ -1,4 +1,4 @@
 repoman-travis
 ==============
 
-Current travis.yml to run repoman in your overlay.
+Current travis.yml to run repoman continuously in your overlay.
