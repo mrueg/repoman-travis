@@ -26,4 +26,4 @@ before_script:
     - chmod 555 spinner.sh
     - cd travis-overlay
 script: 
-    - "./../spinner.sh ./../portage-${PORTAGE_VER}/bin/repoman full -d"
+    - ./../spinner.sh "./../portage-${PORTAGE_VER}/bin/repoman full -d"
