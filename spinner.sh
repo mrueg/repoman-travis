@@ -10,7 +10,7 @@ spinner() {
 		printf "\r%s" "${SPIN:$i:1}"
 		i=$(($i+1))
 		[[ $i -eq 4 ]] && i=0
-		sleep 0.25;
+		sleep 0.5;
 	done
 }
 
@@ -19,7 +19,7 @@ PID=$!
 spinner "${PID}" &
 wait ${PID}
 RC=$?
-sleep 0.5
+sleep 0.75
 printf "\r"
 cat /tmp/output
 exit $RC
