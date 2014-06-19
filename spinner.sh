@@ -14,6 +14,7 @@ spinner() {
 	done
 }
 
+cat update 2>/dev/null
 $(script -q -e /dev/null -c "${@} 2>&1" >/tmp/output) &
 PID=$!
 spinner "${PID}" &
