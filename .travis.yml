@@ -1,3 +1,4 @@
+#
 # Run repoman on travis
 # https://github.com/mrueg/repoman-travis
 #
@@ -5,7 +6,7 @@ language: python
 python:
     - "3.4"
 env:
-    - PORTAGE_VER="2.2.14"
+    - PORTAGE_VER="2.2.15"
 before_script:
     - mkdir travis-overlay
     - mv !(travis-overlay) travis-overlay/
