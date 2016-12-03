@@ -1,5 +1,5 @@
 #
-# Run repoman via travis
+# Run repoman via travis (or shippable)
 # See https://github.com/mrueg/repoman-travis
 #
 language: python
@@ -12,6 +12,7 @@ before_install:
     - pip install lxml
 before_script:
     - mkdir travis-overlay
+    - shopt -s extglob
     - mv !(travis-overlay) travis-overlay/
     - mv .git travis-overlay/
     - wget "https://raw.githubusercontent.com/mrueg/repoman-travis/master/.travis.yml" -O .travis.yml.upstream
