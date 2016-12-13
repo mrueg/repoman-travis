@@ -2,6 +2,8 @@
 # Small spinner script, that returns exit code of CMD and keeps colored output
 # Usage: ./spinner CMD
 
+set -eo pipefail
+
 spinner() {
 	local PID=$1
 	local SPIN="/-\|"
@@ -15,7 +17,7 @@ spinner() {
 }
 
 cat /tmp/update 2>/dev/null
-script -q -e /dev/null -c "${@}" >/tmp/output 2>&1 &
+$(script -q -e /dev/null -c "$*" >/tmp/output 2>&1) &
 PID=$!
 spinner "${PID}" &
 wait ${PID}
