@@ -8,7 +8,7 @@ spinner() {
 	local i=0
 	while kill -0 "$PID" >/dev/null 2>&1; do
 		printf "\r%s" "${SPIN:$i:1}"
-		i=$((i+1))
+		i=$((i + 1))
 		[[ $i -eq 4 ]] && i=0
 		sleep 0.5;
 	done
