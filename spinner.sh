@@ -15,7 +15,7 @@ spinner() {
 }
 
 cat /tmp/update 2>/dev/null
-$(script -q -e /dev/null -c "${*} 2>&1" >/tmp/output) &
+script -q -e /dev/null -c "${*} 2>&1" >/tmp/output &
 PID=$!
 spinner "${PID}" &
 wait ${PID}
